@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>求職履歷 - 聶運安</title>
+    <style>
+        body {
+            background-color: #3b4461; /* 根據圖片背景色 */
+            color: #ffffff;
+            font-family: "Microsoft JhengHei", sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        /* 上半部：職業意願 */
+        .career-plan {
+            margin-bottom: 50px;
+        }
+
+        h2.main-title {
+            font-size: 24px;
+            border-bottom: 1px solid #6b728e;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-weight: bold;
+            margin-top: 20px;
+            display: block;
+        }
+
+        .text-content {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #d1d5db;
+            margin-top: 5px;
+        }
+
+        /* 下半部：求職履歷卡片 */
+        .resume-card {
+            background-color: #d1d5db; /* 淺灰色底 */
+            color: #000000;
+            padding: 40px;
+            width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 180px;
+            background-color: #888;
+            object-fit: cover;
+            margin-right: 30px;
+        }
+
+        .name-box {
+            text-align: center;
+        }
+
+        .name-zh {
+            font-size: 32px;
+            letter-spacing: 5px;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .name-en {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .info-section h3 {
+            font-size: 20px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        .info-section p {
+            font-size: 14px;
+            margin: 5px 0;
+            line-height: 1.5;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+        }
+        .menu-link {
+    background-color: var(--card-blue);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+}
+
+.menu-nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.menu-link {
+    background-color: var(--card-blue);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+}
+
+.menu-link:hover {
+    background-color: #5d71a8;
+    transform: translateY(-2px);
+}
+
+/* 標題旁的返回小連結 */
+.back-link {
+    font-size: 0.9rem;
+    color: var(--text-grey);
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: normal;
+}
+
+.back-link:hover {
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<nav class="menu-nav">
+        <a href="1.html" class="menu-link"><i class="fas fa-bars"></i> MENU</a>
+    </nav>
+
+<div class="container">
+    <div class="career-plan">
+        <h2 class="main-title">我未來想從事的工作：硬體工程師</h2>
+        
+        <span class="section-title">原因：</span>
+        <p class="text-content">
+            從測驗結果發現自己是屬於CI事務研究型，自己在實務方面有一定的實力，同時我也很享受修東西這件事情，之前有上過課程後才確定自己想往這條路發展。
+        </p>
+
+        <span class="section-title">工作內容：</span>
+        <p class="text-content">
+            硬體工程師負責維護、保養、叫修硬體基礎設備，確保穩定運行並滿足業務需求。排除故障，維持工作效率是我們的職責。我在實習的時候，也是從事這方面的工作，我覺得非常有趣。
+
+        <span class="section-title">如何充實自我：</span>
+        <p class="text-content">
+            1.建立更好的硬體知識，確保在工作時可以有效發揮。<br>
+            2.取得相關的硬體維修認證，例如：丙級電腦硬體裝修技術士。<br>
+            3.熟練使用各種硬體設備，如硬體拆裝、系統重灌等，以進行實際操作和實務。
+        </p>
+    </div>
+
+    <h2 class="main-title">求職履歷</h2>
+
+    <div class="resume-card">
+        <div class="profile-header">
+            <img src="img/圖片4.png" alt="聶運安" class="profile-img">
+            <div class="name-box">
+                <h1 class="name-zh">聶運安</h1>
+                <p class="name-en">Balu Pacasaw</p>
+            </div>
+        </div>
+
+        <div class="info-grid">
+            <div class="info-section">
+                <h3>個人簡介</h3>
+                <p>性別：男</p>
+                <p>生日：2006年02月26日</p>
+                <p>年齡：20</p>
+            </div>
+            <div class="info-section">
+                <h3>學習過的技能</h3>
+                <p>程式：JAVA Python C語言</p>
+                <p>網頁設計：HTML</p>
+            </div>
+            <div class="info-section">
+                <h3>學歷</h3>
+                <p>靜宜大學<br>資訊管理學系 在學生</p>
+            </div>
+            <div class="info-section">
+                <h3>應徵職務</h3>
+                <p>硬體工程師</p>
+            </div><div class="info-section">
+                <h3>實習紀錄</h3>
+                <p>潭子慈濟醫院資訊室系統組</p>
+            </div>
+        </div>
+
+        <div class="info-section contact-info">
+            <h3>聯繫方式</h3>
+            <p>手機：0909025235</p>
+            <p>信箱：s1131254@gmail.com</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

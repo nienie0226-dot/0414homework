@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人簡介 - 展示網頁</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-dark: #3c3f4a;      /* 頁面最深底色 */
+            --card-blue: #516496;    /* 區塊藍色底色 */
+            --text-white: #ffffff;
+            --text-grey: #bdc3c7;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', "Microsoft JhengHei", sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            line-height: 1.6;
+            padding-bottom: 50px;
+        }
+
+        /* 頂部標題 */
+        .page-header {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 60px 20px 20px;
+        }
+
+        .header-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--text-grey);
+        }
+
+        .page-title {
+            font-size: 2.2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* 內容容器 */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 單個簡介區塊 */
+        .intro-section {
+            background-color: var(--card-blue);
+            margin-bottom: 40px;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            /* 輕微傾斜效果（模擬圖片中的不對稱感） */
+            clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 98%);
+        }
+
+        /* 反轉排列的區塊 (圖片在左) */
+        .intro-section.reverse {
+            flex-direction: row-reverse;
+            clip-path: polygon(0 2%, 100% 0, 100% 98%, 0 100%);
+        }
+
+        /* 文字內容區 */
+        .content-box {
+            flex: 1;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            text-align: right;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        /* 圖片在右時標題向右，圖片在左時標題向左 */
+        .reverse .section-title {
+            text-align: left;
+        }
+
+        .separator {
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .details {
+            text-align: right;
+            font-size: 1rem;
+            color: var(--text-white);
+        }
+
+        .reverse .details {
+            text-align: left;
+        }
+
+        /* 圓形照片 */
+        .photo-wrapper {
+            flex-shrink: 0;
+        }
+
+        .profile-photo {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* 播放按鈕樣式 */
+        .music-btn {
+            display: inline-flex;
+            align-items: center;
+            background: transparent;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .music-btn i {
+            background: white;
+            color: var(--card-blue);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .music-btn:hover {
+            opacity: 0.8;
+            transform: translateX(5px);
+        }
+
+        /* 響應式：手機版 */
+        @media (max-width: 768px) {
+            .intro-section, .intro-section.reverse {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 30px 20px;
+            }
+            .section-title, .details, .reverse .section-title, .reverse .details {
+                text-align: center;
+            }
+            .profile-photo {
+                width: 180px;
+                height: 180px;
+            }
+        }
+        /* 右上角固定 Menu 連結 */
+.menu-nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.menu-link {
+    background-color: var(--card-blue);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+}
+
+.menu-link:hover {
+    background-color: #5d71a8;
+    transform: translateY(-2px);
+}
+
+/* 標題旁的返回小連結 */
+.back-link {
+    font-size: 0.9rem;
+    color: var(--text-grey);
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: normal;
+}
+
+.back-link:hover {
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <body>
+    <nav class="menu-nav">
+        <a href="1.html" class="menu-link"><i class="fas fa-bars"></i> MENU</a>
+    </nav>
+
+
+    <header class="page-header">
+        <div class="header-icon"><i class="far fa-gem"></i></div>
+        <h1 class="page-title">個人簡介</h1>
+    </header>
+
+    <div class="container">
+        
+        <section class="intro-section">
+            <div class="content-box">
+                <h2 class="section-title">基本資料</h2>
+                <hr class="separator">
+                <div class="details">
+                    <p>姓名：聶運安</p>
+                    <p>系級：資管二A</p>
+                    <p>學號：411312545</p>
+                    <p>信箱：s1131254@gmail.com</p>
+                </div>
+            </div>
+            <div class="photo-wrapper">
+                <img src="img/me1.png" alt="基本資料照片" class="profile-photo">
+            </div>
+        </section>
+
+        <section class="intro-section reverse">
+            <div class="content-box">
+                <h2 class="section-title">高中經歷</h2>
+                <hr class="separator">
+                <div class="details">
+                    <p>擔任環工副隊長</p>
+                    <p>擔任風紀股長</p>
+                    <p>擔任健身社社長</p>
+                </div>
+            </div>
+            <div class="photo-wrapper">
+                <img src="img/圖片2.png" alt="高中經歷照片" class="profile-photo">
+            </div>
+        </section>
+
+        <section class="intro-section">
+            <div class="content-box">
+                <h2 class="section-title">興趣專長</h2>
+                <hr class="separator">
+                <div class="details">
+                    <p>興趣：打球、健身、玩遊戲、吃東西</p>
+                    <p>專長：打保齡球、腕力</p>
+                </div>
+            </div>
+            <div class="photo-wrapper">
+                <img src="img/圖片3.png" alt="興趣專長照片" class="profile-photo">
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
