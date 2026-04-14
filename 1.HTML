@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>置中藍色選單</title>
+    <style>
+        /* 1. 設定 Body 背景為藍色並置中所有內容 */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* 佔滿視窗高度 */
+            display: flex; /* 使用 Flexbox */
+            justify-content: center; /* 水平置中 */
+            align-items: center; /* 垂直置中 */
+            background-color: #3e5088; /* 圖片背景的藍色 */
+            font-family: 'Segoe UI', "Microsoft JhengHei", sans-serif;
+            overflow: hidden; /* 防止出現捲軸 */
+        }
+
+        /* 2. 選單彈窗主體樣式 (還原圖片質感) */
+        .menu-modal {
+            background-color: #516496; /* 圖片中彈窗的灰藍色 */
+            width: 320px;
+            padding: 40px 30px;
+            border-radius: 4px; /* 輕微圓角 */
+            position: relative; /* 為了讓關閉按鈕絕對定位 */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* 陰影讓彈窗浮起來 */
+            text-align: center;
+            color: white;
+            animation: popIn 0.4s ease; /* 增加一個彈出動畫 */
+        }
+
+        /* 彈出動畫 */
+        @keyframes popIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* 右上角關閉按鈕 (X) */
+        .close-button {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: rgba(255, 255, 255, 0.7); /* 半透明白色 */
+            font-size: 1.5rem;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .close-button:hover {
+            color: white; /* 滑鼠懸停時變亮 */
+        }
+
+        /* MENU 標題 */
+        .menu-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 4px; /* 字距拉開，更具設計感 */
+            margin-bottom: 20px;
+        }
+
+        /* 分隔線 (模擬圖片樣式) */
+        .separator {
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.2); /* 半透明線條 */
+            margin: 0 auto 20px auto;
+            width: 90%;
+        }
+
+        /* 選單連結列表 */
+        .menu-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-item {
+            margin: 20px 0;
+        }
+
+        .menu-item a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.85); /* 淺灰色 */
+            font-size: 1rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+        }
+
+        /* 滑鼠懸停效果：文字變白並稍微放大 */
+        .menu-item a:hover {
+            color: white;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-modal">
+        <div class="close-button">&times;</div>
+        
+        <div class="menu-title">MENU</div>
+        
+        <hr class="separator">
+        
+        <ul class="menu-list">
+            <li class="menu-item"><a href="個人簡介.html">個人簡介</a></li>
+            <li class="menu-item"><a href="我的測驗結果.html">我的測驗結果</a></li>
+            <li class="menu-item"><a href="MIS工作分析.html">MIS工作分析</a></li>
+            <li class="menu-item"><a href="求職履歷.html">求職履歷</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
